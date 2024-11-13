@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+//  Tasks -1:Define a function with two parameters, assigning a default value to the second one, Call it with both one and two arguments, and show the outputs.
+
+function greet( name, free = 'world'){
+    return` ami hoy ${name} ${free}`
+}
+console.log(greet("Hello"));
+
+// practice:
+
+// / let num1 = "Nurjahan ";
+// let num2 = " Swarna";
+// function fullName(firstName , lastName){
+//     return` My name is ${firstName} ${lastName}`
+// }
+// console.log(fullName(num1, num2));
+
+  
+//Tasks -2: Create a function that takes a name and a city as input and returns a multi-line message using template literals, incorporating both variables.Combine two arrays using the spread operator and find the maximum value inthe merged array.
+
+function place(name , city){
+    return` ${city} is a capital of ${name}`
+}
+console.log(place('Dhaka', 'Bangladesh'));
+
+// Tasks - 3:Combine two arrays using the spread operator and find the maximum value in the merged array.
+ let arry1 = [1, 2, 3, 4]
+ let arry2 = [ 3, 3, 3, 3];
+
+ newArray = [...arry1 , ...arry2];
+let maximum = Math.max(...newArray)
+console.log(maximum);
+
+// practice
+
+// let str1 = ' hello';
+// let str2 = ' wolrd';
+//  let newStr = str1.concat(str2);
+//  console.log(newStr);
+ 
+//  Tasks -4 :Create an object with properties name, age, and country, and use destructuring to extract them into variables. Also, destructure an array of five numbers to get the first two elements.
+
+let person ={
+    name: 'Swarna',
+    age : 30,
+    country: "Bangladesh"
+};
+let number =[1, 3, 5, 6, 4];
+const [first, second]=number
+let alLast = {name, age , country} = person;
+console.log(name, age, country);
+console.log(first , second);
+
+// Tasks -5:Access the city property of a nested object using both dot notation and optional chaining.
+ let person= {
+    name:"Swarna",
+    
+ adress:{
+    city:'Khulna',
+    postCode :9360
+}
+ };
+ console.log(person.adress.postCode);
+console.log(person.adress?.id);
+
+//  Tasks - 6: Given an array of student objects with properties name and marks, use:map() to extract the names
+
+const studentDetails =[
+    {name:'Swarna' , age : 22},
+    {name:'Mim' , age : 21},
+    {name:'Riya' , age : 20},
+    {name:'Poli' , age : 28}
+]
+const result = studentDetails.map(student =>student.name);
+console.log(result);
+
+// Tasks - 7:filter() to return students with marks above 80.
+ let marks = [
+    {name:'swarna', mark : 90},
+    {name:'mim', mark : 70},
+ ];
+ const student = marks.filter(result => student.mark > 80);
+ console.log(student);
+let marks = [
+    {name: 'swarna', mark: 90},
+    {name: 'mim', mark: 70},
+];
+const studentsAbove80 = marks.filter(result => result.mark < 80).map(result => result.name);
+console.log(studentsAbove80);
+
+//  Tasks -8 :Use map() on a string array to create a new array where each string is prefixed with "Hello, ".
+// 
+let sentence = ["ami", "tumi", "amra"];
+let deails = sentence.map(nam =>`person ${nam}`);
+console.log(deails);
+
+// Tasks -9: Given an array of objects, use filter() to return all objects where a specific condition is met (e.g., products priced above a certain amount).
+let products =[
+    {name :"dress", price:1000},
+    {name :"Bag", price:600},
+    {name :"Foundation", price:500},
+    {name :"Cosma", price:800},
+    {name :"Face Power", price:400},
+];
+let Details = products.filter(product => product.price > 500);
+console.log(Details);
+
+// Tasks -10:You have an array of product objects, where each product has a name and price. Write a function that uses the map method to create a new array of strings. Each string should contain the product's name and price formatted as Product: [name] costs $ [price].
+
+const products = [
+    { name: 'Laptop', price: 1200 },
+    { name: 'Phone', price: 800 },
+    { name: 'Headphones', price: 30 },
+    { name: 'Keyboard', price: 80 },
+    { name: 'Mouse', price: 25 }
+];
+function productDetails(products){
+  return products.map(product =>`products:${products,name} Costs: ${product.price}`)
+}
+console.log(productDetails(products));
+
+
+
+// // let priceDeatils = products.map(product =>{
+// //     return`product :${product.name} costs :${product.price}`
+
+// // })
+// // console.log(priceDeatils);
+// </script>
+</body>
+</html>
